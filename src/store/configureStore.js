@@ -1,4 +1,4 @@
-import { addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters } from './actions'
+/*import { addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters } from './actions'
 
 
 import { createStore } from 'redux'
@@ -23,4 +23,18 @@ store.dispatch(toggleTodo(1))
 store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED))
 
 // Stop listening to state updates
-unsubscribe()
+unsubscribe()*/
+
+import { createStore } from 'redux';
+import rootReducer from '../reducers';
+
+const configureStore = (initialState) => {
+	const store = createStore(
+        rootReducer,
+        initialState 
+    );
+    return store;
+}
+ 
+
+export default configureStore;
