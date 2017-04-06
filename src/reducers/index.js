@@ -42,13 +42,15 @@ const todoApp = combineReducers({
 
 export default todoApp;
 */
+import { routerReducer as routing } from 'react-router-redux';
 import { combineReducers } from 'redux';
 import todos from './todos'
 import visibilityFilter from './visibilityFilter';
 
 const todoApp = combineReducers({
     todos,
-    visibilityFilter
+    visibilityFilter,
+    routing
 });
 
 export default todoApp;

@@ -11,14 +11,14 @@ export default class App extends Component {
 
 import React from 'react';
 import Footer from './Footer';
-import AddTodo from '../containers/AddTodo';
-import VisibleTodoList from '../containers/VisibleTodoList';
 
-const App = () => (
+
+const App = ({children}) => (
   <div>
-    <AddTodo />
-    <VisibleTodoList />
+    
     <Footer />
+
+    <div style={{ marginTop: '1.5em' }}>{children}</div>
   </div>
 )
 
